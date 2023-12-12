@@ -79,12 +79,13 @@ public class Main {
         return count;
     }
 
-    // I 
+    /**
+     * Solution after I got inspired by other colleagues :) 
+     * @return
+     */
     private static long followTheInstructionsAsAGhost2() {
         String[] currentNodes = new String[startingNodes.size()];
         startingNodes.toArray(currentNodes);
-        long count = 0;
-        boolean found = false;
         char[] charArray = instructions.toCharArray();
         List<Integer> cycles = new ArrayList<>();
         for(String s : currentNodes) {
