@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang.StringUtils;
 
 class PartNumbers {
@@ -27,7 +28,7 @@ public class Main {
     private static void task2() {
         BufferedReader reader;
         try {
-            reader = new BufferedReader(new FileReader("src\\main\\java\\de\\tk\\day3\\input1.txt"));
+            reader = new BufferedReader(new FileReader(FilenameUtils.separatorsToSystem("src\\main\\java\\de\\tk\\day3\\input1.txt")));
             int sum = 0;
             String previousLin = "";
             String currentLine = ""; // no we 
@@ -172,7 +173,7 @@ public class Main {
     private static void task1() {
         BufferedReader reader;
         try {
-            reader = new BufferedReader(new FileReader("src\\main\\java\\de\\tk\\day3\\input1.txt"));
+            reader = new BufferedReader(new FileReader(FilenameUtils.separatorsToSystem("src\\main\\java\\de\\tk\\day3\\input1.txt")));
             int sum = 0;
             String previousLin = "";
             String currentLine = "";

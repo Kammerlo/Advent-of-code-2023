@@ -1,5 +1,7 @@
 package de.tk.day6;
 
+import org.apache.commons.io.FilenameUtils;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -47,7 +49,7 @@ public class Main {
     private static void fillGameList() {
         BufferedReader reader;
         try {
-            reader = new BufferedReader(new FileReader("src\\main\\java\\de\\tk\\day6\\input2.txt"));
+            reader = new BufferedReader(new FileReader(FilenameUtils.separatorsToSystem("src\\main\\java\\de\\tk\\day6\\input2.txt")));
             String time = reader.readLine();
             time = time.replaceAll("[A-Z][a-z]{1,}:\\s{1,}", "");
             time = time.replaceAll("\\s{1,}", " "); // just to remove multiple whitespace with just one

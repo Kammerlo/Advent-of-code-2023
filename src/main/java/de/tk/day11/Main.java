@@ -8,6 +8,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.commons.io.FilenameUtils;
 import org.javatuples.Pair;
 import org.opencv.core.Core;
 import org.opencv.core.CvType;
@@ -26,7 +27,7 @@ public class Main {
         OpenCV.loadLocally();
         // SolutionPart1();
         // Solution task 2
-        String input = "src\\main\\java\\de\\tk\\day11\\input.txt";
+        String input = FilenameUtils.separatorsToSystem("src\\main\\java\\de\\tk\\day11\\input.txt");
         List<Integer> expansionX = new ArrayList<>();
         List<Integer> expansionY = new ArrayList<>();
 
@@ -122,7 +123,7 @@ public class Main {
     }
 
     private static void SolutionPart1() {
-        List<List<Integer>> galaxy = getGalaxyFromInput("src\\main\\java\\de\\tk\\day11\\input.txt");
+        List<List<Integer>> galaxy = getGalaxyFromInput(FilenameUtils.separatorsToSystem("src\\main\\java\\de\\tk\\day11\\input.txt"));
         List<Point> galaxyPoints = getGalaxyPoints(galaxy);
         
         int sum = 0;

@@ -3,13 +3,11 @@ package de.tk.day10;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.sql.RowIdLifetime;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.javatuples.Pair;
+import org.apache.commons.io.FilenameUtils;
 import org.javatuples.Triplet;
-import org.opencv.core.MatOfPoint;
 import org.opencv.core.MatOfPoint2f;
 import org.opencv.core.Point;
 import org.opencv.imgproc.Imgproc;
@@ -35,7 +33,7 @@ public class Main {
         OpenCV.loadLocally();
         MatOfPoint2f contour = new MatOfPoint2f();
         
-        Map testMap1 = getMap("src\\main\\java\\de\\tk\\day10\\input.txt");
+        Map testMap1 = getMap(FilenameUtils.separatorsToSystem("src\\main\\java\\de\\tk\\day10\\input.txt"));
         
         int loopLength1 = getLoopLengthForMap(testMap1, contour);
         System.out.println("Solution Task1: " + loopLength1 / 2);

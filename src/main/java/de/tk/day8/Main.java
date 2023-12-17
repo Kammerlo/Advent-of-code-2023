@@ -1,5 +1,7 @@
 package de.tk.day8;
 
+import org.apache.commons.io.FilenameUtils;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -34,7 +36,7 @@ public class Main {
     static String instructions = "LRRLRLRRLRRRLRLRLRRLRRRLRRRLRRLRRRLRLRLRLRLRLRLRRRLRRLRRRLLLLRRRLRLLLRRRLLRLLRRRLRRRLRLRRLRRRLRRRLLRRRLRLRRRLLRRRLRLLRRRLRRLLRLRLRLRRRLRLLRLRLRRRLRLLRLRLRRRLLRRRLRRLRRRLRLRRLRLRRLRLRRLRRRLLRRRLLLRRRLLRRLRRLRRLRLLRRLRRRLRRLRLRLRRLRRLLLRRLRLRRRLRRRLRRRLLLRLRRRLLRRRLRLLRRRR";
 
     public static void main(String[] args) {
-        fillMap("src\\main\\java\\de\\tk\\day8\\input.txt");
+        fillMap(FilenameUtils.separatorsToSystem("src\\main\\java\\de\\tk\\day8\\input.txt"));
 
         Node startNode = map.get("AAA");
         SearchResult start = new SearchResult();

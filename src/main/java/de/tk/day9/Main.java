@@ -10,6 +10,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import org.apache.commons.io.FilenameUtils;
 import org.w3c.dom.Node;
 
 public class Main {
@@ -21,7 +22,7 @@ public class Main {
 
     private static void getSolutionTask2() {
         List<int[]> testInputs = new ArrayList<>();
-        fillMap("src\\main\\java\\de\\tk\\day9\\testInput.txt", testInputs);
+        fillMap(FilenameUtils.separatorsToSystem("src\\main\\java\\de\\tk\\day9\\testInput.txt"), testInputs);
         int testSum = 0;
         for(int[] line : testInputs) {
             testSum += calculatePreviousValue(line);
@@ -36,7 +37,7 @@ public class Main {
         System.out.println("TestSolution is expected to be: 2 Code result is: " + testSum);
 
         List<int[]> input1 = new ArrayList<>();
-        fillMap("src\\main\\java\\de\\tk\\day9\\input.txt", input1);
+        fillMap(FilenameUtils.separatorsToSystem("src\\main\\java\\de\\tk\\day9\\input.txt"), input1);
         int solutionTask2 = 0;
         for(int[] line : input1) {
             solutionTask2 += calculatePreviousValue(line);
@@ -46,7 +47,7 @@ public class Main {
 
     private static void getSolutionTask1() {
         List<int[]> testInputs = new ArrayList<>();
-        fillMap("src\\main\\java\\de\\tk\\day9\\testInput.txt", testInputs);
+        fillMap(FilenameUtils.separatorsToSystem("src\\main\\java\\de\\tk\\day9\\testInput.txt"), testInputs);
         int testSum = 0;
         for(int[] line : testInputs) {
             testSum += calculateNextValue(line);
@@ -61,7 +62,7 @@ public class Main {
         System.out.println("TestSolution is expected to be: 114 Code result is: " + testSum);
 
         List<int[]> input1 = new ArrayList<>();
-        fillMap("src\\main\\java\\de\\tk\\day9\\input.txt", input1);
+        fillMap(FilenameUtils.separatorsToSystem("src\\main\\java\\de\\tk\\day9\\input.txt"), input1);
         int solutionTask1 = 0;
         for(int[] line : input1) {
             solutionTask1 += calculateNextValue(line);

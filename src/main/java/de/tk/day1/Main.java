@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
+import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang.ArrayUtils;
 
 class DigitPosition {
@@ -24,7 +25,7 @@ public class Main {
     private static void secondTask() {
         BufferedReader reader;
         try {
-            reader = new BufferedReader(new FileReader("src\\main\\java\\de\\tk\\day1\\input1.txt"));
+            reader = new BufferedReader(new FileReader(FilenameUtils.separatorsToSystem("src\\main\\java\\de\\tk\\day1\\input1.txt")));
             String line = reader.readLine();
             int sum = 0;
             while(line != null) {
@@ -67,7 +68,7 @@ public class Main {
     private static void firstTask() {
         BufferedReader reader;
         try {
-            reader = new BufferedReader(new FileReader("src\\main\\java\\de\\tk\\day1\\input1.txt"));
+            reader = new BufferedReader(new FileReader(FilenameUtils.separatorsToSystem("src\\main\\java\\de\\tk\\day1\\input1.txt")));
             String line = reader.readLine();
             int sum = 0;
             while(line != null) {

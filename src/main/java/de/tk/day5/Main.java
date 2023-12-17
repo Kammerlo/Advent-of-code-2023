@@ -1,5 +1,7 @@
 package de.tk.day5;
 
+import org.apache.commons.io.FilenameUtils;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -76,7 +78,7 @@ public class Main {
     private static void fillLists() {
         BufferedReader reader;
         try {
-            reader = new BufferedReader(new FileReader("src\\main\\java\\de\\tk\\day5\\input.txt"));
+            reader = new BufferedReader(new FileReader(FilenameUtils.separatorsToSystem("src\\main\\java\\de\\tk\\day5\\input.txt")));
             String line = reader.readLine();
             seeds = fillSeedList(line);
             line = reader.readLine(); // reading empty line

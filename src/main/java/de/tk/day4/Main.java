@@ -1,5 +1,7 @@
 package de.tk.day4;
 
+import org.apache.commons.io.FilenameUtils;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -84,7 +86,7 @@ public class Main {
     private static void fillLists() {
         BufferedReader reader;
         try {
-            reader = new BufferedReader(new FileReader("src\\main\\java\\de\\tk\\day4\\input.txt"));
+            reader = new BufferedReader(new FileReader(FilenameUtils.separatorsToSystem("src\\main\\java\\de\\tk\\day4\\input.txt")));
             String line = reader.readLine();
             while(line != null) {
                 String card = line.replaceAll("Card\\s{1,}\\d{1,}:\\s", "");

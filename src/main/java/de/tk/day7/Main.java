@@ -1,5 +1,7 @@
 package de.tk.day7;
 
+import org.apache.commons.io.FilenameUtils;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -148,7 +150,7 @@ public class Main {
     };
     
     public static void main(String[] args) {
-        parseHands("src\\main\\java\\de\\tk\\day7\\testInput.txt");
+        parseHands(FilenameUtils.separatorsToSystem("src\\main\\java\\de\\tk\\day7\\testInput.txt"));
         // Solution Task 1
         // hands.sort(handComparatorWithoutJoker);
         // List<Hand> reversed = hands;

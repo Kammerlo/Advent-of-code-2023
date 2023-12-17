@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
+import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang.StringUtils;
 
 public class Main {
@@ -17,7 +18,7 @@ public class Main {
 private static void task2() {
     BufferedReader reader;
     try {
-        reader = new BufferedReader(new FileReader("src\\main\\java\\de\\tk\\day2\\input1.txt"));
+        reader = new BufferedReader(new FileReader(FilenameUtils.separatorsToSystem("src\\main\\java\\de\\tk\\day2\\input1.txt")));
         String line = reader.readLine();
         int sum = 0;
         while(line != null) {
